@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini Racing Game</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/main.css')}}">
+</head>
+
+<body>
+    <div style="float: left; z-index: 2;">
+        <h1 id="gameTitle">UNDERDOG</h1>
+        <!-- <h2>Game Modes:</h2> -->
+        <div>
+            <div>
+                <h3 class="gameModeNames">Classic</h3>
+                <p class="gameModeSubHeads">(Precision-based)</p>
+                <ul>
+                    <li class="gameDifficultySelections"><a href="{{url_for('classic_easy')}}">Easy</a></li>
+                    <li class="gameDifficultySelections"><a href="{{url_for('classic_medium')}}">Medium</a></li>
+                    <li class="gameDifficultySelections"><a href="{{url_for('classic_hard')}}">Hard</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="gameModeNames">Button Mash</h3>
+                <p class="gameModeSubHeads">(Speed-based)</p>
+                <ul>
+                    <li class="gameDifficultySelections"><a href="{{url_for('button_mash_easy')}}">Easy</a></li>
+                    <li class="gameDifficultySelections"><a href="{{url_for('button_mash_medium')}}">Medium</a></li>
+                    <li class="gameDifficultySelections"><a href="{{url_for('button_mash_hard')}}">Hard</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="tagLine" style="float: right;">One afternoon at Royal Ascot, an unlikely new champion emerges...</div>
+    </div>
+    <img id="unlikelyChampion" src="{{url_for('static', filename='images/dog.gif')}}">
+    <img id="signPost" src="{{url_for('static', filename='images/signPost.png')}}">
+    <script src="script.js" onload="initialiseGame()"></script> <!--I believe this was my attempt to get music to play on site load-->
+</body>
+
+</html>
+
+</html>
