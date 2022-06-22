@@ -2,4 +2,4 @@
 
 One afternoon at Royal Ascot, an unlikely new champion emerges...
 
-[Play the game](www.google.com)
+[Play the game](https://underdogthegame.herokuapp.com/)
