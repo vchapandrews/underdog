@@ -161,6 +161,7 @@ h1 {
 
 a:link {
     color: lightgreen;
+    text-decoration: none;
   }
   
 a:hover {

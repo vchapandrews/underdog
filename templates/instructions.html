@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Instructions</title>
-        <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/main.css')}}">
     </head>
     <body>
         <h2>How To Play</h2>
@@ -15,9 +15,9 @@
                 <li>Each time you complete the sequence your rider will move one place forward.</li>
                 <li>You have 5 lives. Every mistake costs you one life.</li>
             </ol>
+            <p>Good luck!</p>
         </div>
-        <a href="home.html">Back to home</a>
-        <script src="index.js"></script>
+        <a href="{{url_for('home')}}" style="text-decoration: underline;">Back to home</a>
     </body>
     </html>
 </html>

@@ -6,6 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
+@app.route('/instructions')
+def instructions():
+    return render_template('instructions.html')
 
 '''-----------------------
 ROUTES FOR EACH GAME MODE'''
