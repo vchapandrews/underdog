@@ -313,3 +313,5 @@ document.onkeyup = function(event) {
             break;
     }
 };
+
+initialiseGame();
