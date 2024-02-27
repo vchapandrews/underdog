@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <div style="float: left; z-index: 2;">
+        <h1 id="gameTitle">UNDERDOG</h1>
+
+        <div>
+            <div>
+                <h3 class="gameModeNames">Classic</h3>
+                <p class="gameModeSubHeads">(Precision-based)</p>
+                <ul>
+                    <li class="gameDifficultySelections"><a href="/classic-easy">Easy</a></li>
+                    <li class="gameDifficultySelections"><a href="/classic-medium">Medium</a></li>
+                    <li class="gameDifficultySelections"><a href="/classic-hard">Hard</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="gameModeNames">Button Mash</h3>
+                <p class="gameModeSubHeads">(Speed-based)</p>
+                <ul>
+                    <li class="gameDifficultySelections"><a href="/mash-easy">Easy</a></li>
+                    <li class="gameDifficultySelections"><a href="/mash-medium">Medium</a></li>
+                    <li class="gameDifficultySelections"><a href="/mash-hard">Hard</a></li>
+                </ul>
+            </div>
+            <a href="/instructions">👉How to play</a>
+        </div>
+    </div>
+    <div>
+        <div id="tagLine" style="float: right;">One afternoon at Royal Ascot, an unlikely new champion emerges...</div>
+    </div>
+
+    <img
+            id="unlikelyChampion"
+            alt="Dog running across screen"
+            src="/images/dog.gif"
+    >
+
+    <img
+            id="signPost"
+            alt="Sign pointing to Royal Ascot"
+            src="/images/signPost.png"
+    >
+</BaseLayout>
