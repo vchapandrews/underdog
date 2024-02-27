@@ -5,14 +5,14 @@
                     id="arrowUp"
                     alt="Keyboard up arrow"
                     src="/images/arrowUp.jpg"
-                    style="display: inherit; height: 100%; width: 100%;"
+                    style="display: inherit;"
             >
 
             <img
                     id="arrowUpPressed"
                     alt="Keyboard up arrow pressed"
                     src="/images/arrowUpPressed.jpg"
-                    style="display: none; height: 100%; width: 100%;"
+                    style="display: none;"
             >
         </div>
 
@@ -21,14 +21,14 @@
                     id="arrowLeft"
                     alt="Keyboard left arrow"
                     src="/images/arrowLeft.jpg"
-                    style="display: inherit; height: 100%; width: 100%;"
+                    style="display: inherit;"
             >
 
             <img
                     id="arrowLeftPressed"
                     alt="Keyboard left arrow pressed"
                     src="/images/arrowLeftPressed.jpg"
-                    style="display: none; height: 100%; width: 100%;"
+                    style="display: none;"
             >
         </div>
 
@@ -37,14 +37,14 @@
                     id="arrowDown"
                     alt="Keyboard down arrow"
                     src="/images/arrowDown.jpg"
-                    style="display: inherit; height: 100%; width: 100%;"
+                    style="display: inherit;"
             >
 
             <img
                     id="arrowDownPressed"
                     alt="Keyboard down arrow pressed"
                     src="/images/arrowDownPressed.jpg"
-                    style="display: none; height: 100%; width: 100%;"
+                    style="display: none;"
             >
         </div>
 
@@ -53,7 +53,7 @@
                     id="arrowRight"
                     alt="Keyboard right arrow"
                     src="/images/arrowRight.jpg"
-                    style="display: inherit; height: 100%; width: 100%;"
+                    style="display: inherit;"
             >
 
             <img
@@ -65,3 +65,45 @@
         </div>
     </div>
 </div>
+
+<style>
+    #arrowHUD {
+        margin: auto;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3% 2.5%;
+        grid-auto-flow: row;
+        grid-template-areas: ". upArrow ." "leftArrow downArrow rightArrow";
+    }
+
+    .container>div>img {
+        margin: auto;
+    }
+
+    .leftArrow {
+        grid-area: leftArrow;
+    }
+
+    .downArrow {
+        grid-area: downArrow;
+    }
+
+    .rightArrow {
+        grid-area: rightArrow;
+    }
+
+    .upArrow {
+        grid-area: upArrow;
+    }
+
+    img {
+        width: 50px;
+    }
+</style>
