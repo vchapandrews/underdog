@@ -1,0 +1,8 @@
+---
+import {toTitleCase} from "../util/titleCase";
+const {mode, difficulty} = Astro.params;
+---
+<div style="display: inline; float: right;">
+    <h1 id="gameMode">{mode === "classic" ? "Classic" : "Button Mash"}</h1>
+    <div id="difficulty">{toTitleCase(difficulty)}</div>
+</div>
