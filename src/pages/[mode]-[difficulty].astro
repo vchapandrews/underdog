@@ -1,10 +1,10 @@
 ---
-import GameLayout from "../layout/GameLayout.astro";
 import KeyboardGui from "../components/KeyboardGui.astro";
 import Players from "../components/Players.astro";
 import HomeButton from "../components/HomeButton.astro";
 import GameModeDisplay from "../components/GameModeDisplay.astro";
 import GameHud from "../components/GameHud.astro";
+import BaseLayout from "../layout/BaseLayout.astro";
 
 export function getStaticPaths() {
     const MODES = ['classic', 'mash'];
@@ -24,7 +24,15 @@ export function getStaticPaths() {
 }
 ---
 
-<GameLayout>
+<BaseLayout>
+    <audio id="happyBark">
+        <source src="/sounds/mixkit-happy-puppy-barks-741(3).mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="homeScreenAudio">
+        <source src="/sounds/2021-08-16_-_8_Bit_Adventure_-_www.FesliyanStudios.com.mp3" type="audio/mpeg">
+    </audio>
+
     <!--Top bar-->
     <GameHud/>
     <GameModeDisplay/>
@@ -37,4 +45,6 @@ export function getStaticPaths() {
 
     <!--Arrows-->
     <KeyboardGui/>
-</GameLayout>
+
+    <script src="/src/util/run.js"/>
+</BaseLayout>
