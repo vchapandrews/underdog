@@ -1,0 +1,40 @@
+---
+import GameLayout from "../layout/GameLayout.astro";
+import KeyboardGui from "../components/KeyboardGui.astro";
+import Players from "../components/Players.astro";
+import HomeButton from "../components/HomeButton.astro";
+import GameModeDisplay from "../components/GameModeDisplay.astro";
+import GameHud from "../components/GameHud.astro";
+
+export function getStaticPaths() {
+    const MODES = ['classic', 'mash'];
+    const DIFFICULTIES = ['easy', 'medium', 'hard'];
+
+    const staticPaths = [];
+
+    for (const mode of MODES) {
+        for (const difficulty of DIFFICULTIES) {
+            staticPaths.push({
+                params: {mode, difficulty}
+            });
+        }
+    }
+
+    return staticPaths;
+}
+---
+
+<GameLayout>
+    <!--Top bar-->
+    <GameHud/>
+    <GameModeDisplay/>
+
+    <!--Racetrack-->
+    <Players/>
+
+    <!--Start-->
+    <HomeButton/>
+
+    <!--Arrows-->
+    <KeyboardGui/>
+</GameLayout>
